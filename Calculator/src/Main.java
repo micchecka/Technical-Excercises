@@ -21,7 +21,7 @@ public class Main {
                 break;
             }
         }
-        if (sign == null) throw new Exception("Неверный знак");
+        if (sign == null) throw new Exception("Cтрока не является математической операцией");
 
         String[] str = input.split("[\\+\\-*/]");
         if (str.length!=2) throw new Exception("Формат математической операции не удовлетворяет заданию " +
