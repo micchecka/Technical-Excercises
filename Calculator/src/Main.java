@@ -24,6 +24,8 @@ public class Main {
         if (sign == null) throw new Exception("Неверный знак");
 
         String[] str = input.split("[\\+\\-*/]");
+        if (str.length!=2) throw new Exception("Формат математической операции не удовлетворяет заданию " +
+                "- два операнда и один оператор (+, -, /, *)");
         if (Roman.romanToInt(str[0]) & Roman.romanToInt(str[1])) {
             a1 = Roman.romanToArabic(str[0]);
             b1 = Roman.romanToArabic(str[1]);
